@@ -9,3 +9,4 @@ COPY puppeteer-config.json /
 WORKDIR data/
 
 ENTRYPOINT [ "mmdc", "-p", "/puppeteer-config.json" ]
+CMD [ "--help" ]
