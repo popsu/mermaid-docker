@@ -8,7 +8,7 @@ RUN yarn global add @mermaid-js/mermaid-cli@8.4.8 puppeteer@2.1.1
 
 COPY puppeteer-config.json /
 
-WORKDIR data/
+WORKDIR /data/
 
 ENTRYPOINT [ "mmdc", "-p", "/puppeteer-config.json" ]
 CMD [ "--help" ]
