@@ -7,7 +7,11 @@ Dockerized [mermaidcli](https://github.com/mermaid-js/mermaid.cli) to render [Me
 - Mount current directory
 - Run the image as current user's id so that the output file has has same owner
 ```bash
-docker run -v "$(pwd)":/data -u $(id -u) thovi/mermaidcli <options for mmdc>
+docker run -v "$(pwd)":/data -u $(id -u) thovi/mermaidcli:minified <options for mmdc>
+```
+Or use the [mmdc](mmdc) script:
+```bash
+mmdc <options for mmdc>
 ```
 
 ## Example
@@ -19,7 +23,7 @@ graph TD;
     B-->D;
     C-->D;
 EOF
-docker run -v "$(pwd)":/data -u $(id -u) thovi/mermaidcli -i flow.mmd -o flow.png
+docker run -v "$(pwd)":/data -u $(id -u) thovi/mermaidcli:minified -i flow.mmd -o flow.png
 ```
 ## Minified version
 
