@@ -2,4 +2,4 @@
 
 docker run -v "$(pwd)":/data \
     -u $(id -u) \
-    thovi/mermaidcli "$@"
+    thovi/mermaidcli:minified "$@"

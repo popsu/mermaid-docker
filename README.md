@@ -21,3 +21,6 @@ graph TD;
 EOF
 docker run -v "$(pwd)":/data -u $(id -u) thovi/mermaidcli -i flow.mmd -o flow.png
 ```
+## Minified version
+
+- Minify the image using [Docker slim](https://github.com/docker-slim/docker-slim) by running [minify.sh](minify.sh) script
