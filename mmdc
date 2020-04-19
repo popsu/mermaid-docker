@@ -1,5 +1,5 @@
 #!/bin/bash
 
 docker run -v "$(pwd)":/data \
-    -u $(id -u) \
+    -u $(id -u):$(id -g) \
     thovi/mermaidcli:minified "$@"
